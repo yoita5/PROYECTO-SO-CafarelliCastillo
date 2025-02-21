@@ -163,9 +163,6 @@ public void setCicloDuracion(int duracion) {
         TituloCambiarPoliticadePlanificacion = new javax.swing.JLabel();
         GuardarCambiosPlanificacionButton = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
-        cpuContainer1 = new javax.swing.JPanel();
-        cpuContainer2 = new javax.swing.JPanel();
-        cpuContainer3 = new javax.swing.JPanel();
         NumciclorrelojLabel = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -178,6 +175,9 @@ public void setCicloDuracion(int duracion) {
         jScrollPane2 = new javax.swing.JScrollPane();
         Tlista = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        cpuContainer3 = new javax.swing.JPanel();
+        cpuContainer2 = new javax.swing.JPanel();
+        cpuContainer1 = new javax.swing.JPanel();
         ConfiguracionTab = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         TituloPpalConfiguracion = new javax.swing.JLabel();
@@ -286,7 +286,7 @@ public void setCicloDuracion(int duracion) {
         jPanel.setBackground(new java.awt.Color(51, 51, 51));
         jPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(222, 225, 242));
+        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloCrearProceso.setText("Crear Proceso");
@@ -341,9 +341,9 @@ public void setCicloDuracion(int duracion) {
         CiclosParaGenSpinner2.setText("Excepción:");
         jPanel1.add(CiclosParaGenSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, 20));
 
-        jPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 29, 300, 237));
+        jPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 50, 300, 237));
 
-        jPanel2.setBackground(new java.awt.Color(222, 225, 242));
+        jPanel2.setBackground(new java.awt.Color(153, 255, 255));
 
         PoliticadePlanificacionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FCFS", "Round Robin", "SPN", "SRT", "HRRN" }));
         PoliticadePlanificacionCB.addActionListener(new java.awt.event.ActionListener() {
@@ -389,61 +389,21 @@ public void setCicloDuracion(int duracion) {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        jPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 302, 300, -1));
+        jPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 310, 300, -1));
 
         jPanel7.setBackground(new java.awt.Color(222, 225, 242));
         jPanel7.setLayout(new java.awt.GridLayout(3, 1, 10, 10));
-
-        javax.swing.GroupLayout cpuContainer1Layout = new javax.swing.GroupLayout(cpuContainer1);
-        cpuContainer1.setLayout(cpuContainer1Layout);
-        cpuContainer1Layout.setHorizontalGroup(
-            cpuContainer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 209, Short.MAX_VALUE)
-        );
-        cpuContainer1Layout.setVerticalGroup(
-            cpuContainer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 177, Short.MAX_VALUE)
-        );
-
-        jPanel7.add(cpuContainer1);
-
-        javax.swing.GroupLayout cpuContainer2Layout = new javax.swing.GroupLayout(cpuContainer2);
-        cpuContainer2.setLayout(cpuContainer2Layout);
-        cpuContainer2Layout.setHorizontalGroup(
-            cpuContainer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 209, Short.MAX_VALUE)
-        );
-        cpuContainer2Layout.setVerticalGroup(
-            cpuContainer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 177, Short.MAX_VALUE)
-        );
-
-        jPanel7.add(cpuContainer2);
-
-        javax.swing.GroupLayout cpuContainer3Layout = new javax.swing.GroupLayout(cpuContainer3);
-        cpuContainer3.setLayout(cpuContainer3Layout);
-        cpuContainer3Layout.setHorizontalGroup(
-            cpuContainer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 209, Short.MAX_VALUE)
-        );
-        cpuContainer3Layout.setVerticalGroup(
-            cpuContainer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 177, Short.MAX_VALUE)
-        );
-
-        jPanel7.add(cpuContainer3);
-
         jPanel.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1035, 29, -1, -1));
 
         NumciclorrelojLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         NumciclorrelojLabel.setForeground(new java.awt.Color(255, 255, 255));
         NumciclorrelojLabel.setText("0");
-        jPanel.add(NumciclorrelojLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 471, 130, -1));
+        jPanel.add(NumciclorrelojLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 490, 130, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Ciclo de reloj Global");
-        jPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 437, 290, -1));
+        jPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 450, 290, -1));
 
         jScrollPane1.setToolTipText("");
 
@@ -456,12 +416,12 @@ public void setCicloDuracion(int duracion) {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cola de Terminados:");
-        jPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+        jPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Cola de Listos:");
-        jPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 29, -1, -1));
+        jPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, -1));
 
         Blista.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -483,7 +443,7 @@ public void setCicloDuracion(int duracion) {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Cola de Bloqueados:");
-        jPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 221, -1, -1));
+        jPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 220, -1, -1));
 
         Tlista.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -508,7 +468,46 @@ public void setCicloDuracion(int duracion) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, 270, 30));
+        jPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 530, 270, 30));
+
+        javax.swing.GroupLayout cpuContainer3Layout = new javax.swing.GroupLayout(cpuContainer3);
+        cpuContainer3.setLayout(cpuContainer3Layout);
+        cpuContainer3Layout.setHorizontalGroup(
+            cpuContainer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 209, Short.MAX_VALUE)
+        );
+        cpuContainer3Layout.setVerticalGroup(
+            cpuContainer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 177, Short.MAX_VALUE)
+        );
+
+        jPanel.add(cpuContainer3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, -1, -1));
+
+        javax.swing.GroupLayout cpuContainer2Layout = new javax.swing.GroupLayout(cpuContainer2);
+        cpuContainer2.setLayout(cpuContainer2Layout);
+        cpuContainer2Layout.setHorizontalGroup(
+            cpuContainer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 209, Short.MAX_VALUE)
+        );
+        cpuContainer2Layout.setVerticalGroup(
+            cpuContainer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 177, Short.MAX_VALUE)
+        );
+
+        jPanel.add(cpuContainer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
+
+        javax.swing.GroupLayout cpuContainer1Layout = new javax.swing.GroupLayout(cpuContainer1);
+        cpuContainer1.setLayout(cpuContainer1Layout);
+        cpuContainer1Layout.setHorizontalGroup(
+            cpuContainer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 209, Short.MAX_VALUE)
+        );
+        cpuContainer1Layout.setVerticalGroup(
+            cpuContainer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 177, Short.MAX_VALUE)
+        );
+
+        jPanel.add(cpuContainer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
 
         TabContainer.addTab("Simulador", jPanel);
 
@@ -518,7 +517,7 @@ public void setCicloDuracion(int duracion) {
         TituloPpalConfiguracion.setForeground(new java.awt.Color(255, 255, 255));
         TituloPpalConfiguracion.setText("Configuración");
 
-        jPanel4.setBackground(new java.awt.Color(222, 225, 242));
+        jPanel4.setBackground(new java.awt.Color(0, 204, 204));
 
         CambiarnumCPUsLabel.setText("Cambiar número de CPUs activos");
 
@@ -588,7 +587,7 @@ public void setCicloDuracion(int duracion) {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CambiarnumCPUsCB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CambiarnumCPUsLabel, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
@@ -607,7 +606,7 @@ public void setCicloDuracion(int duracion) {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(222, 225, 242));
+        jPanel5.setBackground(new java.awt.Color(0, 204, 204));
 
         CambiarduracionCiclosLabel.setText("Cambiar duración de ciclos de ejecución");
 
@@ -709,11 +708,13 @@ public void setCicloDuracion(int duracion) {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TituloPpalConfiguracion)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(783, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -721,10 +722,10 @@ public void setCicloDuracion(int duracion) {
                 .addGap(17, 17, 17)
                 .addComponent(TituloPpalConfiguracion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(2813, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(2992, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout ConfiguracionTabLayout = new javax.swing.GroupLayout(ConfiguracionTab);
@@ -740,7 +741,7 @@ public void setCicloDuracion(int duracion) {
 
         TabContainer.addTab("Configuración", ConfiguracionTab);
 
-        GraficosTab.setBackground(new java.awt.Color(221, 225, 245));
+        GraficosTab.setBackground(new java.awt.Color(153, 255, 255));
 
         jTabbedPane1.setBackground(new java.awt.Color(221, 225, 245));
 
@@ -800,10 +801,10 @@ public void setCicloDuracion(int duracion) {
 
         TabContainer.addTab("Gráficos", GraficosTab);
 
-        jPanel9.setBackground(new java.awt.Color(221, 225, 245));
+        jPanel9.setBackground(new java.awt.Color(0, 204, 204));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel10.setBackground(new java.awt.Color(192, 204, 255));
+        jPanel10.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 102));
@@ -898,7 +899,7 @@ public void setCicloDuracion(int duracion) {
 
         jPanel9.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 160));
 
-        jPanel11.setBackground(new java.awt.Color(221, 225, 245));
+        jPanel11.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 102));
@@ -989,7 +990,7 @@ public void setCicloDuracion(int duracion) {
 
         jPanel9.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
-        jPanel12.setBackground(new java.awt.Color(221, 225, 245));
+        jPanel12.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 102));
@@ -1078,7 +1079,7 @@ public void setCicloDuracion(int duracion) {
 
         jPanel9.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, -1, 180));
 
-        jPanel13.setBackground(new java.awt.Color(221, 225, 245));
+        jPanel13.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(0, 0, 102));
@@ -1166,7 +1167,7 @@ public void setCicloDuracion(int duracion) {
 
         jPanel9.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, -1, 200));
 
-        jPanel14.setBackground(new java.awt.Color(221, 225, 245));
+        jPanel14.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(0, 0, 102));
@@ -1254,7 +1255,7 @@ public void setCicloDuracion(int duracion) {
 
         jPanel9.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 400, 200));
 
-        jPanel15.setBackground(new java.awt.Color(221, 225, 245));
+        jPanel15.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 0, 102));
