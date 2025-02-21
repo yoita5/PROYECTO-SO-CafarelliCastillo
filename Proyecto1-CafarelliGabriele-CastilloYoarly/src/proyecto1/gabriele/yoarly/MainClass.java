@@ -1,13 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package proyecto1.gabriele.yoarly;
-
-/**
- *
- * @author yoita5
- */
 import Codigo.CPU;
 import Codigo.Cola;
 import Codigo.Manejotxt;
@@ -323,4 +318,128 @@ public static void actualizarVarEstadisticas() {
             }
         }
     }).start();
+}
+
+
+
+   //A Partir de aqui los metodos para ordenar la cola de listos segun la politica de planificacion:
+    
+    //SRT
+    public static void ordenarSRT(Cola<Proceso> colaListos) {
+    int size = colaListos.size();
+    //array del tamano de la cola
+    Proceso[] procesos = new Proceso[size];
+
+    // Desencolar todos los procesos
+    for (int i = 0; i < size; i++) {
+        procesos[i] = colaListos.dequeue();
+    }
+
+    // Ordenar por menor tiempo restante
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (procesos[j].getTiempoRestante() > procesos[j + 1].getTiempoRestante()) {
+                Proceso temp = procesos[j];
+                procesos[j] = procesos[j + 1];
+                procesos[j + 1] = temp;
+            }
+        }
+    }
+
+    // Reencolar procesos ordenados
+    for (Proceso p : procesos) {
+        colaListos.enqueue(p);
+    }
+}
+    
+    //HRRN
+    public static void ordenarHRRN(Cola<Proceso> colaListos, int cicloGlobal) {
+    // Convertir la cola en un array para facilitar el ordenamiento
+    int size = colaListos.size();
+    Proceso[] procesos = new Proceso[size];
+
+    for (int i = 0; i < size; i++) {
+        procesos[i] = colaListos.dequeue();
+    }
+
+    // Ordenar por mayor tasa de respuesta
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            // Calcular tasa de respuesta dinámicamente para los procesos
+            int tiempoEsperaJ = cicloGlobal - procesos[j].getCicloEnqueCola();
+            double tasaRespuestaJ = (tiempoEsperaJ + procesos[j].getCantidadInstrucciones()) / (double) procesos[j].getCantidadInstrucciones();
+
+            int tiempoEsperaJ1 = cicloGlobal - procesos[j + 1].getCicloEnqueCola();
+            double tasaRespuestaJ1 = (tiempoEsperaJ1 + procesos[j + 1].getCantidadInstrucciones()) / (double) procesos[j + 1].getCantidadInstrucciones();
+
+            if (tasaRespuestaJ < tasaRespuestaJ1) {
+                // Intercambiar procesos
+                Proceso temp = procesos[j];
+                procesos[j] = procesos[j + 1];
+                procesos[j + 1] = temp;
+            }
+        }
+    }
+
+    // Volver a encolar los procesos en la cola de listos ordenados
+    for (Proceso p : procesos) {
+        colaListos.enqueue(p);
+    }
+}
+
+    //SPN
+    public static void ordenarSPN(Cola<Proceso> colaListos) {
+    // Convertir la cola en un array para facilitar el ordenamiento
+    int size = colaListos.size();
+    Proceso[] procesos = new Proceso[size];
+
+    for (int i = 0; i < size; i++) {
+        procesos[i] = colaListos.dequeue();
+    }
+
+    // Ordenar por menor tiempo de servicio
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (procesos[j].getCantidadInstrucciones() > procesos[j + 1].getCantidadInstrucciones()) {
+                // Intercambiar procesos
+                Proceso temp = procesos[j];
+                procesos[j] = procesos[j + 1];
+                procesos[j + 1] = temp;
+            }
+        }
+    }
+
+    // Volver a encolar los procesos en la cola de listos ordenados
+    for (Proceso p : procesos) {
+        colaListos.enqueue(p);
+    }
+}
+
+
+public static void generarProcesosAutomáticamente() {
+    String[] tipos = {"CPU bound", "I/O bound"}; // Tipos de procesos disponibles
+    Random random = new Random();
+
+    for (int i = 1; i <= 10; i++) {
+        // Generar características aleatorias para los procesos
+        String nombre = "Proceso_" + i;
+        int cantidadInstrucciones = random.nextInt(10) + 1; // Entre 1 y 10 instrucciones
+        String tipo = tipos[random.nextInt(tipos.length)]; // Aleatorio entre "CPU bound" y "I/O bound"
+        int ciclosParaGenerarExcepcion = tipo.equals("I/O bound") ? random.nextInt(5) + 1 : 0; // Si es I/O bound, genera entre 1 y 5 ciclos
+        int ciclosParaSatisfacerExcepcion = tipo.equals("I/O bound") ? random.nextInt(3) + 1 : 0; // Si es I/O bound, genera entre 1 y 3 ciclos
+
+        // Crear el proceso
+        Proceso nuevoProceso = new Proceso(
+            nombre,
+            cantidadInstrucciones,
+            tipo,
+            ciclosParaGenerarExcepcion,
+            ciclosParaSatisfacerExcepcion
+        );
+
+        // Encolar el proceso en la cola de listos
+        MainClass.colaListos.enqueue(nuevoProceso);
+
+    }
+}
 }
